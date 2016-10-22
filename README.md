@@ -26,3 +26,4 @@ django-admin.py startproject example .
 ./manage.py migrate
 ./manage.py createsuperuser
 
+# fareCalc
