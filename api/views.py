@@ -35,7 +35,7 @@ class AddressLocation(generics.CreateAPIView):
 				entity_id = x['entity_id']
 				entity_type = x['entity_type'].encode('utf8')
 		except (ValueError, KeyError, TypeError):
-			Response('Zomato api response error', status=status.HTTP_500_BAD_REQUEST)
+			Response('Zomato api response error', status=status.HTTP_400_BAD_REQUEST)
 			pass
 		self.create(request, *args, **kwargs)
 		return Response({'entity_id':entity_id, 'entity_type' : entity_type})
@@ -49,16 +49,15 @@ class FareDetail(generics.ListCreateAPIView):
 		prices_details = []
 		start_lat = None
 		start_lon = None
-		import pdb; pdb.set_trace()
 		entity_id = request.query_params.get('entity_id', '')
 		entity_type = request.query_params.get('entity_type', '')
 		url = settings.ZOMATO_API_URL + 'location_details'
 		uber_url = settings.UBER_API_BASE_URL + 'estimates/price'
 		data = {'entity_id': entity_id, 'entity_type' : entity_type}
 		headers = {"User-agent": "curl/7.43.0", "Accept": "application/json", "user-key": settings.ZOMATO_KEY}
-		r = requests.get(url,headers=headers, params=data)
-		if r.status_code == 200:
-			res_data = r.json()
+		zomato_resp = requests.get(url, headers=headers, params=data, verify=False)
+		if zomato_resp.status_code == 200:
+			res_data = zomato_resp.json()
 			start_lat = float(res_data['location']['latitude'])
 			start_lon = float(res_data['location']['longitude'])
 			for best_rest in res_data.get('best_rated_restaurant', []):
@@ -71,7 +70,7 @@ class FareDetail(generics.ListCreateAPIView):
 				'start_latitude':start_lat,
 				'end_latitude': end_lat}
 				
-				res = requests.get(uber_url, params=data)
+				res = requests.get(uber_url, params=param, verify=False)
 				if res.status_code == 200:
 					resp = res.json()
 					fare_details.append({
@@ -81,7 +80,7 @@ class FareDetail(generics.ListCreateAPIView):
 					'max_price': resp['prices'][0]['high_estimate'],
 					'service_name':resp['prices'][0]['localized_display_name']
 					})
-			fare_details = sorted(fare_details, key=lambda k: k['price']) 
+			fare_details = sorted(fare_details, key=lambda k: k['low_price'])
 		return Response({"fare_details": fare_details})
     
 class UserList(generics.ListAPIView):
