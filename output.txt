@@ -1,0 +1,138 @@
+Final Output:
+
+
+{
+    "fare_details": [
+        {
+            "low_price": 30,
+            "restaurant_address": "Shop 2, Chandan Market, S Block, Greater Kailash (GK) 2, New Delhi",
+            "user_rating": {
+                "votes": "779",
+                "aggregate_rating": "3.8",
+                "rating_text": "Good",
+                "rating_color": "9ACD32"
+            },
+            "restaurant_name": "Culinaire",
+            "service_name": "uberPOOL",
+            "max_price": 31
+        },
+        {
+            "low_price": 36,
+            "restaurant_address": "Ground Floor, JMD Kohinoor Mall, Masjid Moth, Main Road, Greater Kailash (GK) 2, New Delhi",
+            "user_rating": {
+                "votes": "641",
+                "aggregate_rating": "4.8",
+                "rating_text": "Excellent",
+                "rating_color": "3F7E00"
+            },
+            "restaurant_name": "Natural Ice Cream",
+            "service_name": "uberPOOL",
+            "max_price": 37
+        },
+        {
+            "low_price": 36,
+            "restaurant_address": "E-556, Greater Kailash (GK) 2, New Delhi",
+            "user_rating": {
+                "votes": "1028",
+                "aggregate_rating": "4.3",
+                "rating_text": "Very Good",
+                "rating_color": "5BA829"
+            },
+            "restaurant_name": "Whipped",
+            "service_name": "uberPOOL",
+            "max_price": 37
+        },
+        {
+            "low_price": 36,
+            "restaurant_address": "M-45, Main Market, Ground Floor, Greater Kailash (GK) 2, New Delhi",
+            "user_rating": {
+                "votes": "328",
+                "aggregate_rating": "3.7",
+                "rating_text": "Good",
+                "rating_color": "9ACD32"
+            },
+            "restaurant_name": "Nutritious Nation",
+            "service_name": "uberPOOL",
+            "max_price": 37
+        },
+        {
+            "low_price": 36,
+            "restaurant_address": "M-58, Main Market, Greater Kailash (GK) 2, New Delhi",
+            "user_rating": {
+                "votes": "131",
+                "aggregate_rating": "4.0",
+                "rating_text": "Very Good",
+                "rating_color": "5BA829"
+            },
+            "restaurant_name": "Dilli BC",
+            "service_name": "uberPOOL",
+            "max_price": 37
+        },
+        {
+            "low_price": 36,
+            "restaurant_address": "M-20, M Block Market, Greater Kailash (GK) 2, New Delhi",
+            "user_rating": {
+                "votes": "706",
+                "aggregate_rating": "3.9",
+                "rating_text": "Good",
+                "rating_color": "9ACD32"
+            },
+            "restaurant_name": "Yeti - The Himalayan Kitchen",
+            "service_name": "uberPOOL",
+            "max_price": 37
+        },
+        {
+            "low_price": 36,
+            "restaurant_address": "Plot 4, Local Shopping Centre, Masjid Moth, Greater Kailash (GK) 2, New Delhi",
+            "user_rating": {
+                "votes": "744",
+                "aggregate_rating": "3.7",
+                "rating_text": "Good",
+                "rating_color": "9ACD32"
+            },
+            "restaurant_name": "Mainland China",
+            "service_name": "uberPOOL",
+            "max_price": 37
+        },
+        {
+            "low_price": 36,
+            "restaurant_address": "M-84, M Block Market, Greater Kailash (GK) 2, New Delhi",
+            "user_rating": {
+                "votes": "445",
+                "aggregate_rating": "3.8",
+                "rating_text": "Good",
+                "rating_color": "9ACD32"
+            },
+            "restaurant_name": "Not Just Paranthas",
+            "service_name": "uberPOOL",
+            "max_price": 37
+        },
+        {
+            "low_price": 36,
+            "restaurant_address": "7, Masjid Moth, Near HDFC Bank, Greater Kailash (GK) 2, New Delhi",
+            "user_rating": {
+                "votes": "233",
+                "aggregate_rating": "3.6",
+                "rating_text": "Good",
+                "rating_color": "9ACD32"
+            },
+            "restaurant_name": "Bikanervala",
+            "service_name": "uberPOOL",
+            "max_price": 37
+        },
+        {
+            "low_price": 41,
+            "restaurant_address": "E-578, Savitri Road, Greater Kailash (GK) 2, New Delhi",
+            "user_rating": {
+                "votes": "272",
+                "aggregate_rating": "3.7",
+                "rating_text": "Good",
+                "rating_color": "9ACD32"
+            },
+            "restaurant_name": "Happy Hakka",
+            "service_name": "uberPOOL",
+            "max_price": 42
+        }
+    ]
+}
+
