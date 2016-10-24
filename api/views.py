@@ -76,6 +76,7 @@ class FareDetail(generics.ListCreateAPIView):
 					fare_details.append({
 					'restaurant_name': best_rest['restaurant']['name'],
 					'restaurant_address': best_rest['restaurant']['location']['address'],
+					'user_rating':best_rest['restaurant']['user_rating'],
 					'low_price': resp['prices'][0]['low_estimate'],
 					'max_price': resp['prices'][0]['high_estimate'],
 					'service_name':resp['prices'][0]['localized_display_name']
